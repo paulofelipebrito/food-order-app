@@ -1,3 +1,4 @@
+import Modal from '../UI/Modal';
 import {CartContainer} from './styles'
 
 export default function Cart(props){
@@ -9,18 +10,18 @@ export default function Cart(props){
     </ul>
 
   return(
-    <CartContainer>
-      <div>
-        {cartItems}
-        <div className="total">
-          <span> Total Amount: </span>  
-          <span> 23.32 </span>  
-        </div>
-        <div className="actions">
-          <button className="button--alt">Close</button>
-          <button className="button--order">Order</button>
-        </div>
-      </div>  
-    </CartContainer>
+    <Modal onClose={props.onClose}>
+      <CartContainer>
+          {cartItems}
+          <div className="total">
+            <span> Total Amount: </span>  
+            <span> 23.32 </span>  
+          </div>
+          <div className="actions">
+            <button className="button--alt" onClick={props.onClose}>Close</button>
+            <button className="button--order">Order</button>
+          </div>
+      </CartContainer>
+    </Modal>
   );
 };

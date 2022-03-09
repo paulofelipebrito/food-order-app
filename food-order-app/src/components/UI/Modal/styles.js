@@ -1,18 +1,6 @@
 import styled from "styled-components";
 
 export const ModalContainer = styled.div`
-  
-  .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 20;
-    background-color: rgba(0, 0, 0, 0.75);
-  }
-
-  .modal {
     position: fixed;
     top: 20vh;
     left: 5%;
@@ -23,13 +11,10 @@ export const ModalContainer = styled.div`
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 30;
     animation: slide-down 300ms ease-out forwards;
-  }
 
   @media (min-width: 768px) {
-    .modal {
-      width: 40rem;
-      left: calc(50% - 20rem);
-    }
+    width: 40rem;
+    left: calc(50% - 20rem);
   }
 
   @keyframes slide-down {
@@ -42,4 +27,15 @@ export const ModalContainer = styled.div`
       transform: translateY(0);
     }
   }
+`
+export const BackdropContainer = styled.div`
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+
 `

@@ -1,9 +1,9 @@
 import {ButtonContainer} from './styles'
 import CartIcon from '../../../Cart/CartIcon';
 
-export default function HeaderCartButton(){
+export default function HeaderCartButton(props){
   return (
-    <ButtonContainer>
+    <ButtonContainer onClick={props.onClick}>
       <span className="icon">
         <CartIcon/>
       </span>
