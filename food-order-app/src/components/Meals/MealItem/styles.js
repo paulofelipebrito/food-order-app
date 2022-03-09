@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MealsItemLi = styled.li`
+export const MealItemLi = styled.li`
   display: flex;
   justify-content: space-between;
   margin: 1rem;
