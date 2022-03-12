@@ -5,6 +5,17 @@ export const AvailableContainer = styled.section`
   width: 90%;
   margin: 2rem auto;
   animation: meals-appear 1s ease-out forwards;
+
+  .MealsLoading{
+    text-align: center;
+    color: black;
+  }
+
+  .MealsError{
+    text-align: center;
+    color: red;
+  }
+
   ul {
     list-style: none;
     margin: 0;
